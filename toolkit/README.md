@@ -9,7 +9,7 @@ This is a quick start quide for Sozu toolkit.
 *  A Multimeter for debug
 *  A solder iron
 *  Some alligator clips
-*  [SOZU tags](https://github.com/FIGLAB/sozu/blob/master/images/pcb.jpg)
+*  [SOZU tags](https://github.com/FIGLAB/Sozu/blob/master/toolkit/images/pcb.jpg)
 *  [RTL-SDR + antenna](https://www.amazon.com/dp/B011HVUEME/ref=cm_sw_em_r_mt_dp_U_lSCGCbVDHKKQQ)
 
 ### Software
