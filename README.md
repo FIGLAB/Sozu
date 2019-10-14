@@ -23,10 +23,7 @@ For bulk and commercial orders place email us at info@figlab.com
 ### Sozu Tags
 PCB design files can be found here: https://github.com/FIGLAB/Sozu/tree/master/pcb
 
-![alt text](./pcb/pcb_design_files.png "Sozu PCB files")
-
-![alt text](./images/tag_picture.jpg "Sozu Tag")
-
+<img src="./images/tag_picture.jpg" alt="" width="499"/>
 
 ### HackRF version
 
