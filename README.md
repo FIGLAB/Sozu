@@ -1,11 +1,9 @@
-# Sozu
-Open Source for Sozu: Self-Powered Radio Tags for Building-Scale Activity Sensing (to appear at [UIST 2019](http://uist.acm.org/uist2019/))
+# Sozu: Self-Powered Radio Tags for Building-Scale Activity Sensing
 
-## About
+### About
+Sozu a low-cost sensing system that can detect a wide range of events wirelessly, through walls and without line of sight, at whole-building scale. Instead of using batteries, Sozu tags convert energy from activities that they sense into RF broadcasts, acting like miniature self-powered radio stations. (to appear at [UIST 2019](http://uist.acm.org/uist2019/))
 
-Sozu a low-cost sensing system that can detect a wide range of events wirelessly, through walls and without line of sight, at whole-building scale. Instead of using batteries, Sozu tags convert energy from activities that they sense into RF broadcasts, acting like miniature self-powered radio stations.
-
-[Youtube Video]
+[Youtube video]
 [Paper]
 [Citation format]
 
@@ -22,7 +20,6 @@ Please fill out the google form below for your toolkit request.
 
 For bulk and commercial orders place email us at info@figlab.com
 
-## Resources
 ### Sozu Tags
 PCB design files can be found here: https://github.com/FIGLAB/Sozu/tree/master/pcb
 
