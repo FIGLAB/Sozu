@@ -86,8 +86,11 @@ The Python code (./toolkit/software/Python/demo_waterfall_server.py) functions l
 Please fill out the google form below for your toolkit request: https://forms.gle/UTFnRSarYxjS2oz19
 
 For bulk orders and commercial collaborations, please email us at info@figlab.com
+## Other Resources
+### See what others created with Sozu
+Auxiliary video of example projects: https://youtu.be/Q_soA7qurLE
 
-### Sozu Tags
-PCB design files can be found here: https://github.com/FIGLAB/Sozu/tree/master/pcb
+### Sozu tags
+PCB design files: https://github.com/FIGLAB/Sozu/tree/master/pcb
 
 <img src="./images/tag_picture.jpg" alt="" width="499"/>
