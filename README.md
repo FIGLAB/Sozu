@@ -3,23 +3,23 @@
 ## About
 Sozu a low-cost self-powered activity sensing system, which can detect a wide range of events wirelessly, through walls and floors, at a whole-building scale. Instead of running on batteries, Sozu tags leverage energy from activities that they sense, and convert this energy into RF broadcasts, acting like miniature radio stations. More information about this project can be found below:
 
-[[Project video]](https://yangzhang.dev/research/Sozu/Sozu.pdf) [[Paper]](https://yangzhang.dev/research/Sozu/Sozu.pdf) [[Citation format]](https://doi.org/10.1145/3332165.3347952)
+[[Project video]](https://youtu.be/wbq-eOOIPyw) [[Paper]](https://yangzhang.dev/research/Sozu/Sozu.pdf) [[Citation format]](https://doi.org/10.1145/3332165.3347952)
 
 ## Sozu Toolkit
 To facilitate others' hands-on experience with Sozu, we created a toolkit which consists of a solar powered Sozu tag, an RTL-SDR, a set of antennas, demo code, and a quick start guide:
 
 
-### Step 0: Make sure you have everything
+### Step 1: Make sure you have everything
 You will find the following parts in the box:
 *  A Sozu tag powered by a small [solar panel](https://www.digikey.com/product-detail/en/panasonic-bsg/AM-8801CAR/869-1016-ND/2165201)
 *  One alligator clip
 *  [RTL-SDR + antenna](https://www.amazon.com/dp/B011HVUEME/ref=cm_sw_em_r_mt_dp_U_lSCGCbVDHKKQQ)
 
-### Step 1: Connect the SDR with antenna (two long ones), and connect it to the laptop:
+### Step 2: Connect the SDR with antenna (two long ones), and connect it to the laptop:
 
 <img src="./toolkit/images/assembleantenna.gif" alt="" width="499"/>
 
-### Step 2: Install software
+### Step 3: Install software
 
 Sozu receiver is based on SDR. In this tutorial, we will use RTL-SDR. The easiest way to get data out of RTL-SDR is to use [pystlsdr](https://nocarryr.github.io/pyrtlsdr/) -- A Python wrapper for librtlsdr (a driver for Realtek RTL2832U based SDR’s). Python3 is required (3.7.4 was tested).
 
@@ -37,7 +37,6 @@ pip install pyrtlsdr
 brew install librtlsdr
 ```
 
-
 3. Download Project Sozu source code from the [Github Page](https://github.com/FIGLAB/Sozu) or
 
 ```bash
@@ -53,14 +52,14 @@ python demo_waterfall.py
 
 If you can see the above output on your python window, you are ready to receive RF signals from Sozu tags!
 
-### Step 3: Deploy Sozu tag in the environment
+### Step 4: Deploy Sozu tag in the environment
 1. Deploy harvesters in the environment (if you are looking for examples, we have a [webpage](https://FIGLAB.com/) which shows how we harvest energy from a wide range of objects)
 
 2. Make sure harvester provides higher than 1.5 Volts from the activity that you are interested in sensing using the multimeter.
 
 3. Connect the energy harvester to the Sozu tag.
 
-### Step 4: Locate the Sozu signal on the frequency spectrogram
+### Step 5: Locate the Sozu signal on the frequency spectrogram
 
 1. Run the Python server code(./toolkit/software/Python/demo_waterfall_server.py):
 
@@ -72,7 +71,7 @@ If you can see the above output on your python window, you are ready to receive 
 
 After you have located the signal, you are ready to make applications out of it!
 
-### Step 5 (optional):  Visualize and process Sozu signals with other programs
+### Step 6 (optional):  Visualize and process Sozu signals with other programs
 
 The Python code (./toolkit/software/Python/demo_waterfall_server.py) functions like a TCP server, ready to stream data out to any programs you want to use in your project. Here we demonstrate getting Sozu signals with Processing.
 
@@ -94,3 +93,14 @@ Auxiliary video of example projects: https://youtu.be/Q_soA7qurLE
 PCB design files: https://github.com/FIGLAB/Sozu/tree/master/pcb
 
 <img src="./images/tag_picture.jpg" alt="" width="499"/>
+
+### Common issues
+
+#### Cannot find Sozu tag frequency
+Solution: Sozu tag's frequency might shift since the spacing of the inductor coil and the trimmer capacitor might change over shipping. To locate tag frequency, please tune the center frequency of your spectrogram visualizer around the labeled frequency on the back of the Sozu tag. It is easier to locate the frequency with Gqrx and use a SDR with wider bandwidth (e.g., [HackRF](https://greatscottgadgets.com/hackrf/one/)) 
+
+#### OSError: Error code -3 when opening SDR (device index = 0)
+Solution: Unplug the SDR from the USB, and plug it back in.
+
+#### AttributeError: dlsym(RTLD_DEFAULT, rtlsdr_get_device_count): symbol not found
+Solution: Try brew install librtlsdr again.
