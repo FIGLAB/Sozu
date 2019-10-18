@@ -53,9 +53,9 @@ python demo_waterfall.py
 If you can see the above output on your python window, you are ready to receive RF signals from Sozu tags!
 
 ### Step 4: Deploy Sozu tag in the environment
-1. Deploy harvesters in the environment (if you are looking for examples, we have a [webpage](https://FIGLAB.com/) which shows how we harvest energy from a wide range of objects)
+1. Deploy harvesters in the environment.
 
-2. Make sure harvester provides higher than 1.5 Volts from the activity that you are interested in sensing using the multimeter.
+2. If you use a different energy harvester, use a multimeter to make sure the harvester provides higher than 1.5 Volts from the activity that you are interested in sensing.
 
 3. Connect the energy harvester to the Sozu tag.
 
@@ -81,10 +81,13 @@ The Python code (./toolkit/software/Python/demo_waterfall_server.py) functions l
 
 <img src="./toolkit/images/processing.gif" alt="" width="499"/>
 
+3. Finally, connecting the alligator cable to the tag antenna as an extension helps improve the broadcast range.
+
 ### Request Sozu Toolkit
 Please fill out the google form below for your toolkit request: https://forms.gle/UTFnRSarYxjS2oz19
 
 For bulk orders and commercial collaborations, please email us at info@figlab.com
+
 ## Other Resources
 ### See what others created with Sozu
 Auxiliary video of example projects: https://youtu.be/Q_soA7qurLE
@@ -97,10 +100,13 @@ PCB design files: https://github.com/FIGLAB/Sozu/tree/master/pcb
 ### Common issues
 
 #### Cannot find Sozu tag frequency
-Solution: Sozu tag's frequency might shift since the spacing of the inductor coil and the trimmer capacitor might change over shipping. To locate tag frequency, please tune the center frequency of your spectrogram visualizer around the labeled frequency on the back of the Sozu tag. It is easier to locate the frequency with Gqrx and use a SDR with wider bandwidth (e.g., [HackRF](https://greatscottgadgets.com/hackrf/one/)) 
+Solution: Try to move the Sozu tag closer to the receiver. It is also possible that Sozu tag frequency shifted since the spacing of the inductor coil and the trimmer capacitor might change over shipping. To locate tag frequency, please tune the center frequency of your spectrogram visualizer around the labeled frequency on the back of the Sozu tag. It is easier to locate the frequency with Gqrx and use a SDR with wider bandwidth (e.g., [HackRF](https://greatscottgadgets.com/hackrf/one/) has a 20MHz bandwidth)
 
 #### OSError: Error code -3 when opening SDR (device index = 0)
 Solution: Unplug the SDR from the USB, and plug it back in.
 
 #### AttributeError: dlsym(RTLD_DEFAULT, rtlsdr_get_device_count): symbol not found
 Solution: Try brew install librtlsdr again.
+
+## Contact
+yang.zhang@cs.cmu.edu
