@@ -98,6 +98,11 @@ PCB design files: https://github.com/FIGLAB/Sozu/tree/master/pcb
 
 <img src="../images/tag_picture.jpg" alt="" width="499"/>
 
+### Gqrx
+[Gqrx](http://gqrx.dk) is a useful software to interface SDRs with a nice UI, which you can use and tune many parameters (e.g., sampling rate, center frequency, averaging etc.) for debug.
+
+<img src="./images/gqrx.png" alt="" width="499"/>
+
 ### Common issues
 
 #### Cannot find Sozu tag frequency
