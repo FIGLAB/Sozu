@@ -84,6 +84,12 @@ For bulk orders and commercial collaborations, please email us at info@figlab.co
 Contact yang.zhang@cs.cmu.edu for any other questions.
 
 ## Other Resources
+### What does the name Sozu mean
+
+Sozu – comes from the traditional Japanese water feature, where a bamboo segment slowly fills with water, eventually causing its center of mass to shift, such that it pivots downwards, striking a rock (designed to scare away animals in gardens). This is similar in principle to our system, where one form of energy is converted into another for practical use.
+
+<img src="./images/sozu.gif" alt="" width="499"/>
+
 ### See what others created with Sozu
 Auxiliary video of example projects: https://youtu.be/Q_soA7qurLE
 
